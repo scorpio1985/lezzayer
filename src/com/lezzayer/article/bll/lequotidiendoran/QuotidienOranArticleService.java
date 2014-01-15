@@ -1,13 +1,16 @@
 package com.lezzayer.article.bll.lequotidiendoran;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.Date;
 
 import com.lezzayer.article.bll.ArticleService;
+import com.lezzayer.article.bo.Article;
 
 public class QuotidienOranArticleService implements ArticleService {
 
 	@Override
-	public String computTitle() {
+	public String computeTitle() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -32,6 +35,12 @@ public class QuotidienOranArticleService implements ArticleService {
 
 	@Override
 	public Date computeArticleDate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Article computeArticle() throws MalformedURLException, IOException {
 		// TODO Auto-generated method stub
 		return null;
 	}

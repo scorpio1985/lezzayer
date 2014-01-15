@@ -44,6 +44,12 @@ public class Article {
 	public void setArticleDate(Date articleDate) {
 		this.articleDate = articleDate;
 	}
+	@Override
+	public String toString() {
+		return "Article [title=" + title + ", webSiteName=" + webSiteName
+				+ ", articleUrl=" + articleUrl + ", textPreview=" + textPreview
+				+ ", articleDate=" + articleDate + "]";
+	}
 	
 	
 
