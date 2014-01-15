@@ -7,5 +7,6 @@ public class LiberteUtils {
 	public static final String WEBSITE_NAME = "Liberte";
 	public static final String RUBRIQUE_ARTICLE = "rubrique-article";
 	public static final String RUBRIQUE_ARTICLE_LINK = "rubrique-article_link";	
+	public static final String DATE_FORMAT = "EEEE, dd MMMM yyyy hh:mm";
 
 }

@@ -8,11 +8,11 @@ import com.lezzayer.article.bo.Article;
 
 public interface ArticleService {
 	
-	public Article computeArticle() throws MalformedURLException, IOException;
+	public Article computeArticle() throws Exception;
 	public String computeTitle() throws MalformedURLException, IOException;
 	public String computeWebSiteName();
 	public String computeArticleUrl() throws MalformedURLException, IOException;
 	public String computeTextPreview() throws MalformedURLException, IOException;
-	public Date computeArticleDate();
+	public Date computeArticleDate() throws Exception;
 
 }
