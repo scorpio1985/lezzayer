@@ -11,6 +11,8 @@ import com.lezzayer.article.bll.ArticleService;
 import com.lezzayer.article.bll.NodeUtils;
 import com.lezzayer.article.bo.Article;
 
+import org.apache.commons.lang3.StringEscapeUtils;;
+
 public class ElWatanArticleService implements ArticleService {
 	
 	private HtmlCleaner cleaner;
@@ -42,7 +44,6 @@ public class ElWatanArticleService implements ArticleService {
 		
 		TagNode nodeTitle = nodeArticle.findElementByName(NodeUtils.H1, true);
 		TagNode nodeAhref = nodeTitle.findElementByName(NodeUtils.A, true);
-		nodeAhref.getAttributeByName(NodeUtils.HREF);
 		
 		return ElWatanUtils.ACTU_SITE_URL + nodeAhref.getAttributeByName(NodeUtils.HREF);
 	}
@@ -51,14 +52,17 @@ public class ElWatanArticleService implements ArticleService {
 	public String computeTextPreview() {
 		
 		TagNode nodePreview = nodeArticle.findElementByAttValue(NodeUtils.CLASS, ElWatanUtils.ACCROCHE, true, true);
-		return nodePreview.getText().toString();
+		TagNode nodeAhref = nodePreview.findElementByName(NodeUtils.A, true);
+		String textPreview = nodeAhref.getText().toString();
+		textPreview = StringEscapeUtils.unescapeHtml4(textPreview.trim());
+		
+		return textPreview;
 	}
 
 	@Override
 	public Date computeArticleDate() throws Exception {
 		TagNode nodeDate = nodeArticle.findElementByAttValue(NodeUtils.CLASS, ElWatanUtils.DATE_PUBLI, true, true);
-		String date = new String (nodeDate.getText().toString().getBytes("UTF-8"), "UTF-8");
-		System.err.println("["+date+"]");
+		String date = nodeDate.getText().toString();
 		SimpleDateFormat formater = new SimpleDateFormat(ElWatanUtils.DATE_FORMAT);
 		
 		return formater.parse(date);
