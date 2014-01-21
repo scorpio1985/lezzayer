@@ -21,7 +21,7 @@ public class LiberteArticleService implements ArticleService {
 	
 	public LiberteArticleService() throws Exception {
 		cleaner = new HtmlCleaner();
-		node = cleaner.clean(new URL(LiberteUtils.ACTU_SITE_URL));
+		node = cleaner.clean(new URL(LiberteUtils.ACTU_SITE_URL), "UTF-8");
 		nodeArticle = node.findElementByAttValue(NodeUtils.CLASS, LiberteUtils.RUBRIQUE_ARTICLE, true, true);
 	}
 

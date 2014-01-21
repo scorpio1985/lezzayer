@@ -46,9 +46,9 @@ public class Article {
 	}
 	@Override
 	public String toString() {
-		return "Article [title=" + title + ", webSiteName=" + webSiteName
-				+ ", articleUrl=" + articleUrl + ", textPreview=" + textPreview
-				+ ", articleDate=" + articleDate + "]";
+		return "Article [title=" + title + ", \nwebSiteName=" + webSiteName
+				+ ", \narticleUrl=" + articleUrl + ", \ntextPreview=" + textPreview
+				+ ", \narticleDate=" + articleDate + "]";
 	}
 	
 	

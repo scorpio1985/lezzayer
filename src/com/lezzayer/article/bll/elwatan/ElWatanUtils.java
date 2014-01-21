@@ -7,6 +7,6 @@ public class ElWatanUtils {
 	public static final String WEBSITE_NAME = "El Watan";
 	public static final String ACCROCHE = "accroche";
 	public static final String DATE_PUBLI = "date-publi";
-	public static final String DATE_FORMAT = "'le' dd/MM/yy 'Ã ' hh'h'mm ";
+	public static final String DATE_FORMAT = "'le' dd/MM/yy 'à' hh'h'mm ";
 
 }

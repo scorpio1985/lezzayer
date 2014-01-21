@@ -19,7 +19,7 @@ public class ElWatanArticleService implements ArticleService {
 	
 	public ElWatanArticleService() throws Exception {
 		cleaner = new HtmlCleaner();
-		node = cleaner.clean(new URL(ElWatanUtils.ACTU_SITE_URL));
+		node = cleaner.clean(new URL(ElWatanUtils.ACTU_SITE_URL), "UTF-8");
 		nodeArticle = node.findElementByAttValue(NodeUtils.CLASS, ElWatanUtils.RUBRIQUE_ARTICLE, true, true);
 	}
 
