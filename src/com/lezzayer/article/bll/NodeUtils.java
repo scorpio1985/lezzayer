@@ -7,6 +7,8 @@ public class NodeUtils {
 	public static final String HREF = "href";
 	public static final String P = "p";
 	public static final String H3 = "H3";
+	public static final String H1 = "h1";
+	public static final String A = "a";
 	
 	
 
