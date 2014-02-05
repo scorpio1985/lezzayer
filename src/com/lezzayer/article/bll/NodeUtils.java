@@ -10,6 +10,8 @@ public class NodeUtils {
 	public static final String H1 = "h1";
 	public static final String A = "a";
 	
+	public static final String DATE_FORMAT = "dd/MM/yyyy hh:mm";
+	
 	
 
 }
